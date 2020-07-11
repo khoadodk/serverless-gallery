@@ -11,9 +11,9 @@
     "react-scripts": "3.4.1"
   },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
+    "start": "env-cmd ./.dev.env react-scripts start",
+    "build": "env-cmd ./.dev.env react-scripts build",
+    "test": "env-cmd ./.dev.env react-scripts test",
     "eject": "react-scripts eject"
   },
   "eslintConfig": {
@@ -30,5 +30,9 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "env-cmd": "^8.0.2",
+    "serverless-stack-output": "^0.2.3"
   }
 }

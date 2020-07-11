@@ -1,0 +1,22 @@
+service: serverless-gallery
+frameworkVersion: '=1.38.0'
+
+provider:
+  name: aws
+  stage: ${opt:stage, 'dev'}
+  runtime: nodejs12.x
+  region: us-east-1
+
+plugins:
+  - serverless-stack-output
+
+custom:
+  output:
+    handler: scripts/output.handler
+
+functions:
+  hello:
+    handler: handler.hello
+
+bundle:
+  linting: false
