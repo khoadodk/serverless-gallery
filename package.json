@@ -6,14 +6,18 @@
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.3.2",
     "@testing-library/user-event": "^7.1.2",
+    "antd": "^3.13.4",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
-    "react-scripts": "3.4.1"
+    "react-redux": "^7.2.0",
+    "react-scripts": "3.4.1",
+    "redux": "^4.0.5",
+    "redux-thunk": "^2.3.0"
   },
   "scripts": {
-    "start": "env-cmd ./.dev.env react-scripts start",
-    "build": "env-cmd ./.dev.env react-scripts build",
-    "test": "env-cmd ./.dev.env react-scripts test",
+    "start": "env-cmd ./.dev.env react-app-rewired start",
+    "build": "env-cmd ./.dev.env react-app-rewired build",
+    "test": "env-cmd ./.dev.env react-app-rewired test",
     "eject": "react-scripts eject"
   },
   "eslintConfig": {
@@ -33,6 +37,7 @@
   },
   "devDependencies": {
     "env-cmd": "^8.0.2",
+    "react-app-rewired": "^2.1.0",
     "serverless-stack-output": "^0.2.3"
   }
 }
