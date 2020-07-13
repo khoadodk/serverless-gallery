@@ -8,7 +8,7 @@ provider:
   region: us-east-1
 
 plugins:
-  - serverless-stack-output
+  - '@anttiviljami/serverless-stack-output'
 
 # The custom definitions will be used by the plugins and other declarations.
 # Note that the 'resourceNames' variable is not required by any plugin but is used
@@ -17,7 +17,7 @@ plugins:
 custom:
   resourceNames:
     # change uniqueWord to one of your choice, S3 public web buckets needs to be unique.
-    uniqueWord: khoado
+    uniqueWord: gallery
     uniqueStage: ${self:provider.stage}${self:custom.resourceNames.uniqueWord}
     userPool: ${self:custom.resourceNames.uniqueStage}-user-pool
     pictureBucket: ${self:custom.resourceNames.uniqueStage}-picture
