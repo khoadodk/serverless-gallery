@@ -9,6 +9,7 @@ provider:
 
 plugins:
   - '@anttiviljami/serverless-stack-output'
+  - serverless-dynamodb-autoscaling
 
 # The custom definitions will be used by the plugins and other declarations.
 # Note that the 'resourceNames' variable is not required by any plugin but is used
@@ -28,6 +29,16 @@ custom:
   output:
     # The output post processing script which will build the .env file.
     handler: scripts/config.handler
+  capacities:
+    - table: PicturesTable # DynamoDB Resource
+      read:
+        minimum: 1 # Minimum read capacity
+        maximum: 10 # Maximum read capacity
+        usage: 0.75 # Targeted usage percentage
+      write:
+        minimum: 1 # Minimum write capacity
+        maximum: 10 # Maximum write capacity
+        usage: 0.5 # Targeted usage percentage
 
 # The Resource section will follows the AWS cloudformation syntax and it is used
 # to define additional AWS resources which you desire to use in your serverless

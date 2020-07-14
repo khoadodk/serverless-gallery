@@ -3,7 +3,7 @@ const path = require('path');
 
 function handler(data, serverless, options) {
   console.log('RECEIVED STACK OUTPUT', data);
-  console.log('RECEIVED STACK serverless', serverless);
+  // console.log('RECEIVED STACK serverless', serverless);
 
   let config = [
     `REACT_APP_AWS_REGION=${options.region}`,
