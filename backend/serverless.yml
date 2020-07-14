@@ -36,6 +36,7 @@ custom:
 # yml files hard to maintain and read.
 resources:
   - ${file(resources/security.yml)}
+  - ${file(resources/data-storage.yml)}
 
 bundle:
   linting: false
